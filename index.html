@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 85%;
+            max-width: 400px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            background: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0d5fc4;
+        }
+        .notice {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="taskForm">
+        <label for="name">Name</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+        >
+        <label for="username">Username</label>
+        <input
+            type="text"
+            id="username"
+            placeholder="Choose a username"
+            required
+        >
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+        <button type="submit">Start Task</button>
+    </form>
+    <p class="notice">
+        This demonstration form does not save or transmit your entries.
+        Clicking Start Task will redirect you to Google Play.
+    </p>
+</div>
+<script>
+    document.getElementById("taskForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        window.location.href =
+        "https://play.google.com/store/apps/details?id=com.bvndle";
+    });
+</script>
+</body>
+</html>
