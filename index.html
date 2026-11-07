@@ -3,69 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Registration</title>
+
+    <title>TaskPay Instructions</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
             background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            padding: 15px;
         }
 
         .container {
             background: white;
-            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            padding: 25px;
             border-radius: 10px;
-            width: 85%;
-            max-width: 400px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         h2 {
+            font-size: 21px;
             text-align: center;
+            line-height: 1.5;
+            color: #222;
+            margin-bottom: 25px;
         }
 
-        label {
-            display: block;
-            margin-top: 15px;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 12px;
-            margin-top: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            width: 100%;
-            padding: 14px;
-            margin-top: 25px;
-            background: #1877f2;
-            color: white;
-            border: none;
-            border-radius: 5px;
+        .instructions {
             font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .step {
+            margin-bottom: 20px;
+        }
+
+        .link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #1877f2;
             font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
+            word-break: break-word;
         }
 
-        button:hover {
-            background: #0d5fc4;
+        .link:hover {
+            text-decoration: underline;
         }
 
-        .notice {
-            font-size: 12px;
-            color: #666;
-            margin-top: 15px;
-            text-align: center;
+        .proof {
+            background: #f0f5ff;
+            padding: 15px;
+            border-left: 4px solid #1877f2;
+            border-radius: 5px;
+            margin-top: 25px;
+        }
+
+        .proof strong {
+            color: #222;
         }
     </style>
 </head>
@@ -74,59 +76,44 @@
 
 <div class="container">
 
-    <h2>Task Registration</h2>
+    <h2>
+        THESE ARE THE FULL INSTRUCTIONS FOR YOUR TASKPAY TASK.
+    </h2>
 
-    <form id="registrationForm">
+    <div class="instructions">
 
-        <label for="name">Name</label>
-        <input
-            type="text"
-            id="name"
-            placeholder="Enter your name"
-            required
-        >
+        <div class="step">
+            <strong>1.</strong> Click on the link and register.
 
-        <label for="username">Username</label>
-        <input
-            type="text"
-            id="username"
-            placeholder="Choose a username"
-            required
-        >
+            <br>
 
-        <label for="gender">Gender</label>
-        <select id="gender" required>
-            <option value="">Select gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Prefer not to say">Prefer not to say</option>
-        </select>
+            <a class="link"
+               href="https://www.nairafly.com/?invite_code=254983"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.nairafly.com/?invite_code=254983
+            </a>
+        </div>
 
-        <button type="submit">
-            Complete Sign Up
-        </button>
+        <div class="step">
+            <strong>2.</strong> Download the app and log in with the same username and password that you created on the link before.
+        </div>
 
-    </form>
+        <div class="step">
+            <strong>3.</strong> On your homepage, click on Start Task and complete it there.
+        </div>
 
-    <p class="notice">
-        This is a demonstration page, not an official NairaFly
-        registration form. Your entries are not saved or transmitted.
-        Clicking the button will take you to NairaFly.
-    </p>
+        <div class="proof">
+            <strong>JOB PROOF:</strong>
+
+            <p>
+                Upload a screenshot that shows you've completed it.
+            </p>
+        </div>
+
+    </div>
 
 </div>
-
-<script>
-    document.getElementById("registrationForm")
-        .addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            window.location.href =
-            "https://www.nairafly.com/?invite_code=254983";
-
-        });
-</script>
 
 </body>
 </html>
